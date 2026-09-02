@@ -1,20 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!--DOCTYPE 声明（Document Type Declaration，文档类型声明）-->
+<html lang="en"><!--lang="en"' 属性指定文档的语言为英语,中文zh-CN，德语de-->
   <head>
     <meta charset="UTF-8" />
+    <!-- 使用UTF-8编码显示文字 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 自动手机适配 -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"//此处调用css
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
       integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
       crossorigin="anonymous"
     />
+    <!-- link标签引入外部资源 -->
+    <!-- <link rel="stylesheet" href="style.css" >加载css文件/> -->
+    <!-- 此处一长串的引入是一个云端css库 -->
+    <!-- intergrity属性是用来验证文件的完整性，防止被篡改。 crossorigin属性用于处理跨域请求
+    全称为Subresource Integrity（SRI）子资源资源完整性认证  -->
+    <!-- crossorigin="anonymous"表示允许跨域请求，anonymous表示不发送用户凭据（如cookies）因为我们现在引入了一个cloud云端的外部资源 --> 
     <link rel="stylesheet" href="style.css" />
+    <!-- link标签加载本项目的css资源 -->
+    
     <title>3D Boxes Background</title>
+    <!-- title标签定义网页标题 -->
   </head>
   <body>
     <button id="btn" class="magic">Magic 🎩</button>
+    <!-- 此处class="magic"是一个类名，id="btn"是一个id名，后续js中会用到 -->
     <div id="boxes" class="boxes big"></div>
-    <script src="script.js"></script>//加载js
+    <script src="script.js"></script>
+    <!-- //加载本地js文件 -->
   </body>
 </html>
