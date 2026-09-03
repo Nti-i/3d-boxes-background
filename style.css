@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+/* import 字体 */
 * {
   box-sizing: border-box;
 }
+/* *代表所有html元素，此处代表统一计算尺寸 */
 
 body {
   background-color: #fafafa;
@@ -15,6 +16,12 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+/* front-family: 'Roboto', sans-serif; 代表字体为Roboto
+flex-direction: column; 代表flex布局为纵向排列
+align-items: center; 水平居中
+justify-content: center; 垂直居中
+overflow: hidden; 代表超出部分隐藏(不要出现滚动条) */
+
 
 .magic {
   background-color: #f9ca24;
@@ -31,25 +38,42 @@ body {
   box-shadow: 0 3px rgba(249, 202, 36, 0.5);
   z-index: 100;
 }
-
-.magic:focus {
+/* border :0 无边框（不显示）
+border-radius: 3px; 圆角
+font-size: 16px; 字体大小
+padding: 12px 20px;内容和边框之间距离（上下，左右）
+cursor: pointer; 鼠标悬停时显示为手型
+position: fixed; 固定定位
+top: 20px; 距离顶部20px
+letter-spacing: 1px; 字母间距
+box-shadow: 0 3px rgba(249, 202, 36, 0.5); 阴影 
+z-index: 100;控制层级，那个组块层级最高最靠前
+*/
+/* --------- 一下需要好好看看*/
+/* .magic:focus {
   outline: none;
-}
+} */
 
 .magic:active {
   box-shadow: none;
   transform: translateY(2px);
 }
+/* 会增加“按钮被按下感觉” */
 
 .boxes {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-around;   
   height: 500px;
   width: 500px;
   position: relative;
   transition: 0.4s ease;
 }
+/* display: flex; 代表使用flex布局,横向排列
+flex-wrap: wrap; 代表换行(超过设定宽度自动换行)
+justify-content: space-around; 水平方向上的排列间距!!!!!!!!!!!!!!此处是变换的究极武器
+position: relative; 代表相对定位,后续的定位参考此元素
+transition : 0.4s ease; 代表过渡效果，持续时间0.4秒，缓动函数为ease */
 
 .boxes.big {
   width: 600px;
@@ -59,6 +83,9 @@ body {
 .boxes.big .box {
   transform: rotateZ(360deg);
 }
+找到boxes.big .box 代表boxes类下的big类下的box类
+retate, 旋转绕着z轴
+
 
 .box {
   background-image: url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif');
